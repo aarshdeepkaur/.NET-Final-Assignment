@@ -1,0 +1,43 @@
+﻿@model Assignment2.Models.ViewModels.BrokerageAndClientViewModel;
+
+@{
+    ViewData["Title"] = "Edit Subscriptions";
+}
+
+<h1>Edit</h1>
+
+<div>
+    <h4>Client</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Client.FullName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Client.FullName)
+        </dd>
+    </dl>
+</div>
+<hr />
+<table class="table">
+    @foreach (var item in Model.Brokerages)
+    {
+        <tr>
+            <td>
+                @item.Title
+            </td>          
+            
+            
+                <td>
+                     <a asp-action="AddSubscriptions"  asp-route-cid="@Model.Client.ID">Unregister</a> 
+                </td>
+            
+        </tr>
+    }
+</table>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+

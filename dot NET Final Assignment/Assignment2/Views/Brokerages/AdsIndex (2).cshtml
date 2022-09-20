@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Assignment2.Models.Brokerage>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="CreateAds">Create New Ads</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               File Name
+            </th>
+            <th>
+               Image
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>
+               File name
+            </td>
+            <td>
+                Image
+            </td>
+            <td>
+               
+                <a asp-action="DeleteAds" asp-route-id="">Delete ad</a>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
